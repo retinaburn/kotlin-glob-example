@@ -15,12 +15,12 @@ fun main(args: Array<String>){
     return
   }
   for (arg in args){
-    val f = File(arg)
+    val file = File(arg)
 
-    if (f.exists()){
-      handleFile(f)
+    if (file.exists()){
+      handleFile(file)
     } else {
-      val ds = Files.newDirectoryStream(f.getParentFile().toPath(), f.getName())
+      val ds = Files.newDirectoryStream(file.getParentFile().toPath(), file.getName())
 
       for(path in ds){
         handleFile(path.toFile())
