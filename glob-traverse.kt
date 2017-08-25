@@ -12,6 +12,7 @@ import java.nio.file.Paths
 fun main(args: Array<String>){
   if (args.isEmpty()){
     println(usage())
+    return
   }
   for (arg in args){
     val f = File(arg)
