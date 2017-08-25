@@ -14,8 +14,7 @@ fun main(args: Array<String>){
     println(usage())
   }
   for (arg in args){
-    val filename = arg
-    val f = File(filename)
+    val f = File(arg)
 
     if (f.exists()){
       handleFile(f)
